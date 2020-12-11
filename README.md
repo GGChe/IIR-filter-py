@@ -44,8 +44,6 @@ Filtering Flow
 
 In the realtime script, a combination of sine waves can be created from the function provided. In the case of the example provided, a combination of a 1 and 50 Hz sine waves are provided.
 
-![Figure_1](https://user-images.githubusercontent.com/16301652/101923507-c0921400-3bcf-11eb-8acf-90d4f809ab89.png)
-
 For filtering sample by sample::
 '''
 y = np.zeros(SAMPLES)
