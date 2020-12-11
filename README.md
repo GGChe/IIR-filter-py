@@ -8,41 +8,61 @@ Realtime IIR filter implementation and benchmark in Python
 This is a project where you can create, test, evaluate IIR filters. Besides, an IIR filter class is provided to perform realtime
 processing of a signal. It was designed to achieve efficienc bu using only simple operations. 
 
+Benchmark
+=========
+
+Here, it is possible to create 5 different IIR filters: Butterworth, Bessel, Chebyshev type I, Chebyshev type II, Eliptic. The benchmark is prepared so that you can configure the filter order, the attenuation and rejection band for the filter design and other parameters. 
+
+Real time Filtering implementation
+=======
+
+For the real time implementation of the system, an IIR class was designed and implemented. 
+
 Import
 ======
 
-Use the standard python command to import it::
+Use the command to import it:
 
   import iir-filter
-
 
 Calculate the coefficients
 ==========================
 
-Use your favourite scipy IIR design command and export the coefficients as an SOS::
+You can extract yout filter coefficients from the IIR filter design benchmark and design file::
 
     sos = signal.butter(order, [cutoff(s)], '[filter type]', output='sos')
 
 
-
-Create an instance
+Instantiate the filter
 ==================
 
-The constructor takes the sos chain as an argument::
+You can create an instance of the IIR filter by calling it::
 
     f = iir_filter.IIR_filter(sos)
 
+Filtering Flow
+====
 
-
-Perform filtering sample by sample
-==================================
-
-Filtering is sample by sample by processing the samples
-as they arrive, for example from an ADC::
-
-   sample = f.filter(sample)
-=======
-This is a IIR filter benchmark for filter design and realtime implementation on python
+In the realtime script, a combination of sine waves can be created from the function provided. In the case of the example provided, a combination of a 1 and 50 Hz sine waves are provided.
 
 ![Figure_1](https://user-images.githubusercontent.com/16301652/101923507-c0921400-3bcf-11eb-8acf-90d4f809ab89.png)
+
+For filtering sample by sample::
+'''
+y = np.zeros(SAMPLES)
+for i in range(SAMPLES):
+    y[i] = myFilter.filter(mysignal[i])
+'''
+
+And you obtain something like this:
+
+
+
+
+
+
+
+
+
+
 
