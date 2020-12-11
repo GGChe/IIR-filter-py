@@ -27,7 +27,7 @@ Use the command to import it:
 Calculate the coefficients
 ==========================
 
-You can extract yout filter coefficients from the IIR filter design benchmark and design file::
+You can extract yout filter coefficients from the IIR filter design benchmark and design file:
 
     sos = signal.butter(order, [cutoff(s)], '[filter type]', output='sos')
 
@@ -35,7 +35,7 @@ You can extract yout filter coefficients from the IIR filter design benchmark an
 Instantiate the filter
 ==================
 
-You can create an instance of the IIR filter by calling it::
+You can create an instance of the IIR filter by calling it:
 
     f = iir_filter.IIR_filter(sos)
 
@@ -44,12 +44,12 @@ Filtering Flow
 
 In the realtime script, a combination of sine waves can be created from the function provided. In the case of the example provided, a combination of a 1 and 50 Hz sine waves are provided.
 
-For filtering sample by sample::
-'''
-y = np.zeros(SAMPLES)
-for i in range(SAMPLES):
-    y[i] = myFilter.filter(mysignal[i])
-'''
+For filtering sample by sample:
+
+  y = np.zeros(SAMPLES)
+    for i in range(SAMPLES):
+       y[i] = myFilter.filter(mysignal[i])
+
 
 And you obtain something like this:
 
