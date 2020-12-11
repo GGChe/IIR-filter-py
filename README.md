@@ -56,6 +56,7 @@ for i in range(SAMPLES):
 
 And you obtain something like this:
 
+![Figure_2](https://user-images.githubusercontent.com/16301652/101928475-ee7a5700-3bd5-11eb-9cdb-1f15a0c49a4d.png)
 
 
 
