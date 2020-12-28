@@ -22,7 +22,7 @@ Import
 
 Use the command to import it:
 
-  import iir-filter
+  import iir
 
 Calculate the coefficients
 ==========================
@@ -37,7 +37,7 @@ Instantiate the filter
 
 You can create an instance of the IIR filter by calling it:
 
-    f = iir_filter.IIR_filter(sos)
+    f = iir.IIR_filter(sos)
 
 Filtering Flow
 ====

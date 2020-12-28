@@ -9,6 +9,7 @@ n = 17
 f1 = 50
 f2 = 200
 
+# Here there are two ve
 
 
 b, a = signal.iirfilter(n, [2*np.pi*f1, 2*np.pi*f2], rs=60,
