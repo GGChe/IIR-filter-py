@@ -1,19 +1,17 @@
 
 Realtime IIR filter implementation and benchmark in Python
+====
 
-=======================================
-
-
-This is a project where you can create, test, evaluate IIR filters. Besides, an IIR filter class is provided to perform realtime
-processing of a signal. It was designed to achieve efficienc bu using only simple operations. 
+This is a project where you can create, test, evaluate IIR filters in Python 3.9. Besides, an IIR filter class is provided to perform realtime
+processing of a signal in your own computer withour own processor. It was designed to achieve efficiency but using only simple operations. 
 
 Real time Filtering implementation
-=======
+===
 
 In this repository, it is possible to create 5 different IIR filters: Butterworth, Bessel, Chebyshev type I, Chebyshev type II, Eliptic. The benchmark is prepared so that you can configure the filter order, the attenuation and rejection band for the filter design and other parameters. For the real time implementation of the system, an IIR class was designed and implemented. 
 
 Import
-======
+===
 
 Use the command to import it:
 ```
@@ -49,13 +47,4 @@ For filtering sample by sample:
 And you obtain something like this:
 
 ![Figure_2](https://user-images.githubusercontent.com/16301652/101928475-ee7a5700-3bd5-11eb-9cdb-1f15a0c49a4d.png)
-
-
-
-
-
-
-
-
-
 

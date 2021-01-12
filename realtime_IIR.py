@@ -9,6 +9,7 @@ import numpy as np
 from scipy import signal
 import iir
 
+#Set your sampling frequency
 fs = 2000  # Hertz
 
 def generate_sine_wave(freq, sample_rate, duration, magnitude):
@@ -20,8 +21,10 @@ def generate_sine_wave(freq, sample_rate, duration, magnitude):
 # Generate 2 sinusoidal waves with a frequencies of 1 and 50 Hz for test
 f1 = 1
 f2 = 50
+
 magnitude_1 = 1
 magnitude_2 = 0.5
+
 DURATION = 5  # Seconds
 x, sine1 = generate_sine_wave(f1, fs, DURATION, magnitude_1)
 _, noise = generate_sine_wave(f2, fs, DURATION, magnitude_2)
@@ -52,10 +55,8 @@ for i in range(SAMPLES):
 plt.figure(2)
 plt.subplot(211)
 plt.plot(mysignal)
-# plt.ylim((-150, 300))
 plt.subplot(212)
 plt.plot(y)
-# plt.ylim((-150, 300))
 
 # Calculate the fourier trasnform 
 unfilteredfft = np.fft.fft(mysignal)
@@ -70,6 +71,6 @@ plt.plot(f[:SAMPLES // 2], np.abs(unfilteredfft)[:SAMPLES // 2] * 1 / SAMPLES)
 plt.subplot(212)
 plt.plot(f[:SAMPLES // 2], np.abs(IIRfilteredfft)[:SAMPLES // 2] * 1 / SAMPLES) # 1 / N is a normalization factor
 
-np.savetxt('coefficients.dat', b, fmt='%f', delimiter='')
+np.savetxt('coefficients.dat', coeff, fmt='%f', delimiter='')
 
 plt.show()
